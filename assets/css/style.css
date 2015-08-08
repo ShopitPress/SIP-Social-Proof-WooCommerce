@@ -1,0 +1,6 @@
+/* CSS Document */
+
+.woocommerce ul.products li.product .social-proof strong,
+.woocommerce-page ul.products li.product .social-proof strong {
+  display: inline;
+}
