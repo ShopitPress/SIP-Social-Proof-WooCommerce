@@ -102,27 +102,29 @@
 }
 
 .sip-notification-message .button {
+  height:55px;
+  padding:12px 35px 0px 35px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  background-color: #ed1c24;
+  border-color: #ad1c24;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  color: #fff;
   float: right; 
   border: none; 
-  font-size: 14px; 
   margin: 18px 16px; 
   padding: 12px 29px; 
-  color: #FFF; 
   text-shadow: none; 
   font-weight: bold; 
-  background: #0074A2;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
   text-decoration: none;
   height: 50px;
   text-align: center;
-  text-transform: uppercase;
   box-shadow: none;
-  line-height: 26px;
 }
 
 .sip-notification-message .button:hover { 
-  background-color: #333333;
+  background-color: #ad1c24;
+  border-color: #ad1c24;
   color: #fff;
 }

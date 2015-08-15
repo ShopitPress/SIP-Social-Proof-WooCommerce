@@ -87,7 +87,8 @@
 .sip-spwc-content .button.button-primary {
   background-color: #ed1c24;
   border-color: #ad1c24;
-  box-shadow: 0 1px 0 rgba(120, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0);
+  border-radius: 0px;
 }
 
 .sip-spwc-content .button.button-primary {
@@ -95,6 +96,11 @@
   padding:12px 35px 0px 35px;
   font-size: 20px;
   margin-bottom: 30px;
+}
+
+.sip-spwc-wrap .sip-header .button {
+  border-color: #ad1c24;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0);
 }
 
 .sip-spwc-wrap .button.sip:hover ,

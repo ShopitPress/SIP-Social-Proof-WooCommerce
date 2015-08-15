@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
-    $('.sip-count').each(function () {
-        $('.sip-count').show();
+	$('.sip-count').each(function () {
+    	$('.sip-count').show();
         $(this).prop('Counter',0).animate({
             Counter: $(this).text()
         }, {

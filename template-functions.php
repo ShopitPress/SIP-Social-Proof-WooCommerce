@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Load the plugin stylesheet file
+
 add_action( 'wp_enqueue_scripts', 'sip_spwc_public_assets' );
 function sip_spwc_public_assets() {
 	wp_enqueue_style( 'sip_spwc_stylesheet', plugins_url('style.css', __FILE__) );

@@ -54,7 +54,7 @@ if ( in_array(
 	//add CSS & JS scripts
 	add_action( 'wp_enqueue_scripts', 'sip_spwc_scripts' );
 	function sip_spwc_scripts() {		
-		wp_enqueue_script( 'script-name', plugin_dir_url( __FILE__ ) .  'assets/js/app.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'script-name-p', plugin_dir_url( __FILE__ ) .  'assets/js/app.js', array(), '1.0.0', true );
 		wp_register_style( 'sip-spwc-style', plugin_dir_url( __FILE__ ) .'assets/css/style.css', array(), '1.0.0');
     wp_enqueue_style( 'sip-spwc-style' );
 	}
@@ -80,56 +80,7 @@ if ( in_array(
 			
 				// called just before the woocommerce template functions are included				
 				add_action( 'init', array( &$this, 'sip_spwc_template_functions' ), 20 );
-				add_action('admin_notices', array( &$this, 'sip_spwc_admin_notice') );
-				add_action('admin_init', array( &$this,  'sip_spwc_nag_ignore') );
 				register_deactivation_hook( __FILE__, array( 'SIP_Social_Proof_WC_Admin' , 'sip_spwc_deactivate' ) );
-			}
-
-			/**
-			 * Display a notice.
-			 *
-			 * @since 1.0.1
-			 */
-			public function sip_spwc_admin_notice() {
-				global $current_user ;
-			  $user_id = $current_user->ID;
-			  /* Check that the user hasn't already clicked to ignore the message */
-			  if( ! class_exists( 'SIP_Social_Proof_WC_Pro' ) ) {
-					if ( ! get_user_meta($user_id, 'sip_spwc_ignore_notice') ) { ?>
-
-						<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
-							<div  class="sip-notification-message">
-								<div class="icon">
-									<img title="" src="<?php echo SIP_SPWC_URL . "admin/assets/images/icon-social-proof.png" ?>" alt="" />
-								</div>						
-								<div class="text"><?php
-									_e( 'It\'s time to upgrade your', 'sip-social-proof' ); ?> <strong><?php echo $plugin_info['Name']; ?> plugin</strong> <?php _e( 'to', 'sip-social-proof' ); ?> <strong>PRO</strong> <?php _e( 'version!', 'sip-social-proof' ); ?><br />
-									<span><?php _e( 'Extend standard plugin functionality with new great options.', 'sip-social-proof' ); ?></span>
-									<?php printf(__('| <a href="%1$s">Dismiss this notice</a>'), '?sip_spwc_nag_ignore=0'); ?>							
-								</div>
-								<div class="button_div">
-									<a class="button" target="_blank" href="https://shopitpress.com/plugins/<?php echo SIP_SPWC_PLUGIN_SLUG ; ?>/?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION; ?>&amp;utm_campaign=<?php echo SIP_SPWC_UTM_CAMPAIGN ; ?>"><?php _e( 'Learn More', 'sip-social-proof' ); ?></a>
-								</div>
-							</div>
-						</div>
-					
-					<?php
-					}
-				}
-			}
-
-			/**
-			 * Notice that can be dismissed.
-			 *
-			 * @since 1.0.1
-			 */
-			public function sip_spwc_nag_ignore() {
-				global $current_user;
-		    $user_id = $current_user->ID;
-		    /* If user clicks to ignore the notice, add that to their user meta */
-		    if ( isset($_GET['sip_spwc_nag_ignore']) && '0' == $_GET['sip_spwc_nag_ignore'] ) {
-		        add_user_meta($user_id, 'sip_spwc_ignore_notice', 'true', true);
-				}
 			}
 
 			// include template functions file	
