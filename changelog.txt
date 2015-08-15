@@ -1,0 +1,14 @@
+
+Plugin Name: 	SIP Social Proof for WooCommerce
+Author: 	ShopitPress.com
+
+
+1.0.1 - 08/12/2015
+- Added prefixes to the function names
+- Updated SIP panel to version 1.0.1
+- Added plugin usage guide tab on the settings page
+- Updated the postion of submenu items in SIP Plugins menu
+- Updated plugin icons
+
+1.0.0 - 08/08/2014
+- Initial release
