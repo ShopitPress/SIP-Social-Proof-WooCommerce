@@ -68,7 +68,7 @@ function sip_spwc_get_total_sales($atts)
 		$id = $product->id;
 	
 	if($animation == true )
-		$animation = 'style="display:none" class="count"';
+		$animation = 'style="display:none" class="sip-count"';
 
 	$_pf 			= new WC_Product_Factory();  
   $product 	  	= $_pf->get_product($id);
