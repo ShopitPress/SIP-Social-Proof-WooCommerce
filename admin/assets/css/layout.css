@@ -68,14 +68,14 @@
     float: none;
     margin-right:0;
     width:auto;
-    border:0;     
+    border:0;
   }
 }
 
 /* Sip Notification Message */
 
 .sip-notification-message {
-  border: 1px solid #d4d4d4; 
+  border: 1px solid #d4d4d4;
   margin: 12px 0;
   background: #FFF;
   position: relative;
@@ -89,16 +89,26 @@
 
 .sip-notification-message .icon img {
   max-width: 60px;
+	vertical-align: middle;
 }
 
-.sip-notification-message .text {
-  color: #000; 
-  font-size: 15px; 
-  line-height: 26px; 
-  margin: 18px 18px 14px; 
-  float: left; 
-  width: auto; 
+.sip-notification-message .title {
+  color: #444;
+  font-size: 24px;
+  line-height: 1.25em;
+  margin: 18px 18px 14px;
+  float: left;
+  width: auto;
   max-width: 80%;
+}
+
+.sip-notification-message .subbtitle {
+  color: #999;
+  font-size: 12px;
+}
+
+.sip-notification-message .dismiss a {
+  font-size: 12px;
 }
 
 .sip-notification-message .button {
@@ -111,19 +121,19 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0);
   border-radius: 0px;
   color: #fff;
-  float: right; 
-  border: none; 
-  margin: 18px 16px; 
-  padding: 12px 29px; 
-  text-shadow: none; 
-  font-weight: bold; 
+  float: right;
+  border: none;
+  margin: 18px 16px;
+  padding: 12px 29px;
+  text-shadow: none;
+  font-weight: bold;
   text-decoration: none;
   height: 50px;
   text-align: center;
   box-shadow: none;
 }
 
-.sip-notification-message .button:hover { 
+.sip-notification-message .button:hover {
   background-color: #ad1c24;
   border-color: #ad1c24;
   color: #fff;
