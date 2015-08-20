@@ -68,50 +68,40 @@
     float: none;
     margin-right:0;
     width:auto;
-    border:0;
+    border:0;     
   }
 }
 
 /* Sip Notification Message */
 
-.sip-notification-message {
-  border: 1px solid #d4d4d4;
+.sip-spwc-wrap .sip-notification-message {
+  border: 1px solid #d4d4d4; 
   margin: 12px 0;
   background: #FFF;
   position: relative;
   overflow: hidden;
 }
 
-.sip-notification-message .icon {
+.sip-spwc-wrap .sip-notification-message .icon {
   float: left;
   margin: 12px 8px 8px 12px;
 }
 
-.sip-notification-message .icon img {
+.sip-spwc-wrap  .sip-notification-message .icon img {
   max-width: 60px;
-	vertical-align: middle;
 }
 
-.sip-notification-message .title {
-  color: #444;
-  font-size: 24px;
-  line-height: 1.25em;
-  margin: 18px 18px 14px;
-  float: left;
-  width: auto;
+.sip-spwc-wrap .sip-notification-message .text {
+  color: #000; 
+  font-size: 15px; 
+  line-height: 26px; 
+  margin: 18px 18px 14px; 
+  float: left; 
+  width: auto; 
   max-width: 80%;
 }
 
-.sip-notification-message .subbtitle {
-  color: #999;
-  font-size: 12px;
-}
-
-.sip-notification-message .dismiss a {
-  font-size: 12px;
-}
-
-.sip-notification-message .button {
+.sip-spwc-wrap .sip-notification-message .button {
   height:55px;
   padding:12px 35px 0px 35px;
   font-size: 20px;
@@ -121,20 +111,48 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0) inset, 0 1px 0 rgba(0, 0, 0, 0);
   border-radius: 0px;
   color: #fff;
-  float: right;
-  border: none;
-  margin: 18px 16px;
-  padding: 12px 29px;
-  text-shadow: none;
-  font-weight: bold;
+  float: right; 
+  border: none; 
+  margin: 18px 16px; 
+  padding: 12px 29px; 
+  text-shadow: none; 
+  font-weight: bold; 
   text-decoration: none;
   height: 50px;
   text-align: center;
   box-shadow: none;
 }
 
-.sip-notification-message .button:hover {
+.sip-spwc-wrap .sip-notification-message .button:hover { 
   background-color: #ad1c24;
   border-color: #ad1c24;
   color: #fff;
+}
+
+/*SIP Conatiner*/
+.sip-container {
+  margin-right: 15px;
+}
+
+/*SIP Tabs Content*/
+.sip-tab-content {
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  padding: 20px;
+}
+
+/* Help us section */
+.sip-credit-affiliate-link-warp {
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin: 15px 0;
+}
+
+#spc-spwc-diplay-affiliate-toggle label {
+  margin-left: 15px;
+}
+
+#spc-spwc-affiliate-link-box {
+  margin-top: 5px;
 }

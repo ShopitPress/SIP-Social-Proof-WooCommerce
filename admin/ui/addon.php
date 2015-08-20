@@ -1,4 +1,4 @@
-<div class="sip-spwc-content">
+<div class="sip-tab-content">
   <div style="display: block;"><br>
     <p style="padding:10px 20px"><strong class="strong">Stats available</strong></p>
     <table class="table">
@@ -60,10 +60,15 @@
     <h2 style="padding:0px;">Example usage</h2>
     <p>This month: <strong>[monthly_sales singular="sale" plural="sales" animation="true"]</strong><br>The last sale was only <strong>[hours]</strong>&nbsp;hours and <strong>[minutes]</strong>&nbsp;minutes ago, hurry!<br><strong>[total_sales singular="sale" plural="sales"]</strong> from <strong>[unique_product_customers singular="customer" plural="customers"]</strong> just like you.</p>
     <p style="text-align: center;">
-      <a class="button button-primary" target="_blank" href="<?php echo SIP_SPWC_PLUGIN_PURCHASE_URL; ?>?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION ?>&amp;utm_campaign=sip_social_proof"><span>Get Pro version</span></a>
+      <a class="sip button button-primary" target="_blank" href="<?php echo SIP_SPWC_PLUGIN_PURCHASE_URL; ?>?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION ?>&amp;utm_campaign=sip_social_proof"><span>Get Pro version</span></a>
     </p>
   </div>
-</div><!-- .sip-spwc-content -->
+  
+</div><!-- sip-tab-content -->
+
+
+<?php include('affiliate.php'); ?>
+
 <div class="sip-version">
   <?php $get_optio_version = get_option( 'sip_version_value' ); echo "SIP Version " . $get_optio_version; ?>
 </div> <!-- .sip-version -->

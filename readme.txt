@@ -132,12 +132,13 @@ For screenshots and other information please visit <a href="https://shopitpress.
 == Changelog ==
 
 = 1.0.1 =
-* Added prefixes to the function names
+* Added plugin usage guide tab on the settings page
+* Added the discrete credit link checkbox option in plugin settings page
+* Added affiliate.php in /admin/ui/ folder
 * Updated SIP panel to version 1.0.1
 * Added plugin usage guide tab on the settings page
 * Updated the postion of submenu items in SIP Plugins menu
 * Updated plugin icons
-* Fixed a product count variable issue on shop page
 
 = 1.0.0 =
 * Initial release
