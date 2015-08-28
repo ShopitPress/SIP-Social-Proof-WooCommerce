@@ -1,9 +1,9 @@
-=== SIP Social Proof for WooCommerce ===
-Contributors: (shopitpress, fransanchezoria, arslan104, hafizusman)
+﻿=== SIP Social Proof for WooCommerce ===
+Contributors: (shopitpress, fransanchezoria, arslan104)
 Tags: SIP Social Proof WooCommerce, social-proof, woocommerce, sales count, sales counter
-Requires at least: 3.0.1
-Tested up to: 4.2.3
-Stable tag: 1.0.0
+Requires at least: 3.8 or higher
+Tested up to: 4.2.4
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,7 +131,15 @@ For screenshots and other information please visit <a href="https://shopitpress.
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 - 08/25/2015 =
+* Added prefixes to the function names
+* Updated SIP panel to version 1.0.1
+* Added plugin usage guide tab on the settings page
+* Updated the postion of submenu items in SIP Plugins menu
+* Updated plugin icons
+* Fixed a product count variable issue on shop page
+
+= 1.0.0 - 08/08/2015 =
 * Initial release
 
 == Upgrade Notice ==
