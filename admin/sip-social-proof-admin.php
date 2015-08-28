@@ -62,23 +62,22 @@ class SIP_Social_Proof_WC_Admin {
 	  /* Check that the user hasn't already clicked to ignore the message */
 	  if( ! class_exists( 'SIP_Social_Proof_WC_Pro' ) ) {
 			if ( ! get_user_meta($user_id, 'sip_spwc_ignore_notice') ) { ?>
-				<div class="sip-container">
-					<div style="padding: 0; margin: 0; border: none; background: none;">
-						<div  class="sip-notification-message">
-							<div class="icon">
-								<img title="" src="<?php echo SIP_SPWC_URL . "admin/assets/images/icon-social-proof.png" ?>" alt="" />
-							</div>						
-							<div class="text"><?php
-								_e( 'It\'s time to upgrade your', 'sip-social-proof' ); ?> <strong><?php echo $plugin_info['Name']; ?> plugin</strong> <?php _e( 'to', 'sip-social-proof' ); ?> <strong>PRO</strong> <?php _e( 'version!', 'sip-social-proof' ); ?><br />
-								<span><?php _e( 'Extend standard plugin functionality with new great options.', 'sip-social-proof' ); ?></span>
-								<?php printf(__('| <a href="%1$s">Dismiss this notice</a>'), 'admin.php?page=sip-social-proof-settings&sip_spwc_nag_ignore=0'); ?>							
-							</div>
-							<div class="button_div">
-								<a class="button" target="_blank" href="https://shopitpress.com/plugins/<?php echo SIP_SPWC_PLUGIN_SLUG ; ?>/?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION; ?>&amp;utm_campaign=<?php echo SIP_SPWC_UTM_CAMPAIGN ; ?>"><?php _e( 'Learn More', 'sip-social-proof' ); ?></a>
-							</div>
+				
+				<div style="padding: 0; margin: 0; border: none; background: none; width:98%">
+					<div  class="sip-notification-message">
+						<div class="icon">
+							<img title="" src="<?php echo SIP_SPWC_URL . "admin/assets/images/icon-social-proof.png" ?>" alt="" />
+						</div>
+						<div class="title">Do you want even more <b>Social Proof</b>?<br />
+							<span class="subbtitle">Extend standard plugin functionality with advanced sales stats, customers count and animated counters. </span>
+							<span class="dismiss"><?php printf(__('<a href="%1$s">Dismiss</a>'), 'admin.php?page=sip-social-proof-settings&sip_spwc_nag_ignore=0'); ?></span>
+						</div>
+						<div class="button_div">
+							<a class="button" target="_blank" href="https://shopitpress.com/plugins/<?php echo SIP_SPWC_PLUGIN_SLUG ; ?>/?utm_source=wordpress.org&amp;utm_medium=banner&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION; ?>&amp;utm_campaign=<?php echo SIP_SPWC_UTM_CAMPAIGN ; ?>"><?php _e( 'Learn More', 'sip-social-proof' ); ?></a>
 						</div>
 					</div>
 				</div>
+
 			<?php
 			}
 		}
@@ -97,8 +96,7 @@ class SIP_Social_Proof_WC_Admin {
         add_user_meta($user_id, 'sip_spwc_ignore_notice', 'true', true);
 		}
 	}
-
-            
+           
   /**
    * Plugins page action links
    *
@@ -252,7 +250,7 @@ class SIP_Social_Proof_WC_Admin {
 			} elseif ( 'themes' == $_GET['action'] ) { 
 				include("ui/themes.php");
 			} 
-		?>  
+			?>  
 		</div>
 		<?php	
 	} // END sip_spwc_admin_menu_ui()	
@@ -272,7 +270,9 @@ class SIP_Social_Proof_WC_Admin {
 				<h2 class="nav-tab-wrapper">
 				  <a class="nav-tab<?php if ( !isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=sip-social-proof-settings"><?php _e( 'Settings', 'sip-social-proof' ); ?></a>
 				  <a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'help' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=sip-social-proof-settings&amp;action=help"><?php _e( 'Help', 'sip-social-proof' ); ?></a>
-				  <a class="nav-tab sip-nav-premium<?php if ( isset( $_GET['action'] ) && 'addon' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=sip-social-proof-settings&amp;action=addon"><?php _e( 'Add On', 'sip-social-proof' ); ?></a>
+					<?php if( ! class_exists( 'SIP_Social_Proof_WC_Pro' ) ) { ?>
+				  	<a class="nav-tab sip-nav-premium<?php if ( isset( $_GET['action'] ) && 'addon' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=sip-social-proof-settings&amp;action=addon"><?php _e( 'Add On', 'sip-social-proof' ); ?></a>
+				  <?php } ?>
 				</h2>
 				<?php
 					if ( !isset( $_GET['action'] ) ) { 
@@ -284,6 +284,7 @@ class SIP_Social_Proof_WC_Admin {
 					} 
 			  ?>
 			</div><!-- .container -->
+			  <?php include('ui/affiliate.php'); ?>
 		</div><!-- .sip-sp-wrap -->
 		<?php 
 	} 

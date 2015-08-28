@@ -63,12 +63,7 @@
       <a class="sip button button-primary" target="_blank" href="<?php echo SIP_SPWC_PLUGIN_PURCHASE_URL; ?>?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION ?>&amp;utm_campaign=sip_social_proof"><span>Get Pro version</span></a>
     </p>
   </div>
-  
 </div><!-- sip-tab-content -->
-
-
-<?php include('affiliate.php'); ?>
-
 <div class="sip-version">
   <?php $get_optio_version = get_option( 'sip_version_value' ); echo "SIP Version " . $get_optio_version; ?>
 </div> <!-- .sip-version -->

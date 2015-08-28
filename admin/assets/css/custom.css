@@ -65,3 +65,11 @@
   background-color: #ad1c24;
   border-color: #ad1c24;
 }
+
+#spc-spwc-diplay-affiliate-toggle label {
+  margin-left: 15px;
+}
+
+#spc-spwc-affiliate-link-box {
+  margin-top: 5px;
+}

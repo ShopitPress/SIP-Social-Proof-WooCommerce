@@ -7,12 +7,8 @@
     <p>We want to make your life easier and make you happy about choosing our plugins. We guarantee to respond to every inquiry within 1 business day.
     Please visit our <a href="<?php echo SIP_SPWC_PLUGIN_PURCHASE_URL; ?>?utm_source=wordpress.org&amp;utm_medium=SIP-panel&amp;utm_content=v<?php echo SIP_SPWC_PLUGIN_VERSION ?>&amp;utm_campaign=sip_social_proof" target="_blank">community</a> and ask us anything you need.</p>
 	</div>
-  
 </div><!-- .sip-tab-content -->
 
-<?php include('affiliate.php'); ?>
-
-
-<div class="sip-version jhj">
+<div class="sip-version">
   <?php $get_optio_version = get_option( 'sip_version_value' ); echo "SIP Version " . $get_optio_version; ?>
 </div> <!-- .sip-version -->

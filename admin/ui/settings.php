@@ -31,7 +31,4 @@
     </table>
     <?php submit_button(); ?>
 	</form>
-	
 </div>
-
-<?php include('affiliate.php'); ?>

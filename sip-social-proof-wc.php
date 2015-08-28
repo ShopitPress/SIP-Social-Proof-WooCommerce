@@ -6,19 +6,19 @@
  * @package           sip_social_proof_woocommerce
  *
  * @wordpress-plugin
- * Plugin Name:				SIP Social Proof for WooCommerce
+ * Plugin Name:       SIP Social Proof for WooCommerce
  * Plugin URI:        https://shopitpress.com/plugins/sip-social-proof-woocommerce/
  * Description:       Display real time proof of your sales and customers.
  * Version:           1.0.1
  * Author:            ShopitPress <hello@shopitpress.com>
  * Author URI:        https://shopitpress.com
  * License:           GPL-2.0+
- * License URI:				http://www.gnu.org/licenses/gpl-2.0.txt
- * Copyright:					© 2015 ShopitPress(email: hello@shopitpress.com)
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Copyright: 		    © 2015 ShopitPress(email: hello@shopitpress.com)
  * Text Domain:       sip-social-proof
  * Domain Path:       /languages
- * Requires: PHP5, WooCommerce Plugin
- * Last updated on:  12-08-2015
+ * Requires:					PHP5, WooCommerce Plugin
+ * Last updated on:		25-08-2015
 */
 
 if ( !defined( 'ABSPATH' ) ) { 
@@ -86,10 +86,9 @@ if ( in_array(
 			}
 
 			/**
-			 * registers credit/affiliate link options 
+			 * Registers credit/affiliate link options 			 
 			 *
-			 *
-			 * @since      1.0.2
+			 * @since      1.0.1
 			 */
 			public function sip_spwc_affiliate_register_admin_settings() { 
 				register_setting( 'sip-spwc-affiliate-settings-group', 'sip-spwc-affiliate-check-box' );

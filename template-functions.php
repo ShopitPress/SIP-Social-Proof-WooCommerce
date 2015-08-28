@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Load the plugin stylesheet file
 
-add_action( 'wp_enqueue_scripts', 'sip_spwc_public_assets' );
+//add_action( 'wp_enqueue_scripts', 'sip_spwc_public_assets' );
 function sip_spwc_public_assets() {
 	wp_enqueue_style( 'sip_spwc_stylesheet', plugins_url('style.css', __FILE__) );
 }
@@ -28,16 +28,28 @@ if( get_option('display_sales_shop_page', false) == true) {
 	add_action( 'woocommerce_after_shop_loop_item_title', 'total_sales_shop_page', 11 );
 }
 
+
 function total_sales_single_product_page() {
 	if ( class_exists('SIP_Social_Proof_WC_Pro') ) {
 		if( sip_spwc_settings_get_meta( 'sip_spwc_text_display' )){
-			echo '<div class="social-proof">' . nl2br(do_shortcode(sip_spwc_settings_get_meta( 'sip_spwc_text_display' ))) . '</div>';
+			echo '<div class="social-proof">' . nl2br(do_shortcode(sip_spwc_settings_get_meta( 'sip_spwc_text_display' ))) ;
 		} else {
-			echo  '<div class="socail-proof">' . nl2br(do_shortcode(get_option( 'show_in_product_page_view_editor' ))) . '</div>';
+			echo  '<div class="socail-proof">' . nl2br(do_shortcode(get_option( 'show_in_product_page_view_editor' )));
 		}
 	} else {
-		echo  '<div class="social-proof">' . nl2br(do_shortcode(get_option( 'show_in_product_page_view_editor' ))) . '</div>';
+		echo  '<div class="social-proof">' . nl2br(do_shortcode(get_option( 'show_in_product_page_view_editor' )));
 	}
+	?>
+		<span class="spwc-icon-image">		
+			<?php if(get_option('sip-spwc-affiliate-check-box') == "true") { ?>
+				<?php $options = get_option('sip-spwc-affiliate-radio'); ?>
+				<?php if( 'value1' == $options['option_three'] ) { $url = "https://shopitpress.com/?utm_source=referral&utm_medium=credit&utm_campaign=sip-reviews-shortcode-woocommerce" ; } ?>
+				<?php if( 'value2' == $options['option_three'] ) { $url = "https://shopitpress.com/?offer=". esc_attr( get_option('sip-spwc-affiliate-affiliate-username')) ; } ?>
+				<a class="sip-spwc-credit" href="<?php echo $url ; ?>" target="_blank" data-tooltip="These stats were created with SIP Social Proof for WooCommerce">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			<?php } ?>
+		</span>
+	</div>
+	<?php
 }
 
 function total_sales_shop_page(){
